@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121417">
+  <meta name="description" content="Competitive Edge — exploring qualities that shape competitiveness.">
+  <title>Competitive Edge — Competitiveness</title>
+  <style>
+    :root { color-scheme: dark; --bg: #121417; --gold: #c5a059; --cream: #eaeaea; --muted: #aaa9a4; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--cream); font-family: Inter, Montserrat, "Segoe UI", Arial, sans-serif; }
+    a { color: inherit; }
+    .site-header { position: absolute; inset: 0 0 auto; z-index: 5; padding: 22px clamp(20px, 6vw, 76px); }
+    .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; font-size: 11px; font-weight: 650; letter-spacing: .2em; }
+    .mark { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--gold); color: var(--gold); font: 17px Georgia, serif; }
+    .hero { position: relative; min-height: 100svh; display: flex; align-items: center; isolation: isolate; overflow: hidden; }
+    .hero-photo, .hero-shade { position: absolute; inset: 0; z-index: -2; }
+    .hero-photo { background: center 40% / cover no-repeat; opacity: 0; transform: scale(1.025); transition: opacity 1s ease, transform 7s ease; }
+    .hero-photo.active { opacity: 1; transform: scale(1); }
+    .hero-shade { z-index: -1; background: linear-gradient(90deg, rgba(13,15,17,.88), rgba(13,15,17,.54) 60%, rgba(13,15,17,.31)), linear-gradient(0deg, rgba(13,15,17,.57), transparent 60%, rgba(13,15,17,.4)); }
+    .hero-copy { width: min(760px, 100%); padding: 100px clamp(22px, 11vw, 150px) 80px; }
+    .eyebrow { margin: 0 0 20px; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
+    h1 { margin: 0; font: 400 clamp(54px, 10vw, 104px)/.98 Georgia, "Times New Roman", serif; letter-spacing: -.05em; }
+    .hero-copy > p:not(.eyebrow) { max-width: 450px; margin: 20px 0 28px; color: rgba(234,234,234,.8); font: 17px/1.65 Georgia, serif; }
+    .enter { display: inline-flex; align-items: center; gap: 16px; padding: 14px 18px; background: var(--gold); color: #171717; text-decoration: none; font-size: 10px; font-weight: 750; letter-spacing: .15em; text-transform: uppercase; transition: background .2s, transform .2s; }
+    .enter:hover { background: #d8b879; transform: translateY(-2px); }
+    .enter span { font-size: 17px; }
+    .hero-bottom { position: absolute; inset: auto 0 20px; display: flex; justify-content: space-between; align-items: center; padding: 0 clamp(22px, 6vw, 76px); color: rgba(234,234,234,.7); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+    .hero-count { color: var(--cream); font: 13px Georgia, serif; }
+    .hero-count span { color: var(--muted); }
+    @media (max-width: 600px) { .hero-shade { background: linear-gradient(90deg, rgba(13,15,17,.82), rgba(13,15,17,.4)), linear-gradient(0deg, rgba(13,15,17,.63), transparent 60%, rgba(13,15,17,.35)); } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="index.html"><span class="mark">C</span> COMPETITIVE EDGE</a></header>
+  <main>
+    <section class="hero" id="top" aria-label="Competitive Edge introduction">
+      <div class="hero-photo active" style="background-image:url('images/innovativeness.jpeg')" aria-hidden="true"></div>
+      <div class="hero-photo" style="background-image:url('images/leadership.jpeg')" aria-hidden="true"></div>
+      <div class="hero-photo" style="background-image:url('images/persevarance.jpeg')" aria-hidden="true"></div>
+      <div class="hero-photo" style="background-image:url('images/problem%20solving.jpeg')" aria-hidden="true"></div>
+      <div class="hero-photo" style="background-image:url('images/taking%20innitiative.jpeg')" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-copy"><p class="eyebrow">A team project on</p><h1>Competitiveness</h1><p>Five qualities. One mindset for moving forward.</p><a class="enter" href="content.html">Enter <span aria-hidden="true">→</span></a></div>
+      <div class="hero-bottom"><span>Ideas into action</span><span class="hero-count"><b id="slide-current">01</b> <span>/ 05</span></span></div>
+    </section>
+  </main>
+  <script>
+    (() => {
+      const slides = [...document.querySelectorAll('.hero-photo')];
+      const counter = document.getElementById('slide-current');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let active = 0;
+      if (!reducedMotion) window.setInterval(() => {
+        slides[active].classList.remove('active');
+        active = (active + 1) % slides.length;
+        slides[active].classList.add('active');
+        counter.textContent = String(active + 1).padStart(2, '0');
+      }, 6000);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121417">
+  <meta name="description" content="Explore five qualities that shape competitiveness.">
+  <title>Competitive Edge — The Qualities</title>
+  <style>
+    :root { color-scheme: dark; --bg: #121417; --panel: #181a1b; --gold: #c5a059; --cream: #eaeaea; --muted: #aaa9a4; --line: rgba(234,234,234,.13); }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+    body { margin: 0; background: var(--bg); color: var(--cream); font-family: Inter, Montserrat, "Segoe UI", Arial, sans-serif; }
+    a { color: inherit; }
+    .site-header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; padding: 16px clamp(20px, 6vw, 76px); background: rgba(18,20,23,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+    .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; font-size: 11px; font-weight: 650; letter-spacing: .2em; }
+    .mark { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--gold); color: var(--gold); font: 17px Georgia, serif; }
+    .back { color: var(--muted); font-size: 9px; letter-spacing: .14em; text-decoration: none; text-transform: uppercase; }
+    .back:hover { color: var(--gold); }
+    .hub { padding: 50px 20px 54px; }
+    .hub-heading, .quality-nav, .video-list { max-width: 1000px; margin-left: auto; margin-right: auto; }
+    .hub-heading { margin-bottom: 26px; }
+    .eyebrow { margin: 0 0 12px; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+    .hub-heading h1 { margin: 0; font-size: clamp(38px, 7vw, 62px); letter-spacing: -.04em; }
+    .quality-nav { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: thin; scrollbar-color: var(--gold) transparent; padding: 0 0 10px; margin-bottom: 22px; }
+    .quality-nav a { flex: 0 0 auto; color: var(--muted); padding: 10px 12px; border: 1px solid var(--line); text-decoration: none; font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+    .quality-nav a:hover, .quality-nav a:focus-visible { border-color: var(--gold); color: var(--cream); }
+    .video-list { display: grid; gap: 16px; }
+    .video-card { padding: 21px 17px 18px; background: var(--panel); border: 1px solid var(--line); scroll-margin-top: 85px; }
+    .video-card h2 { margin: 0; font-size: clamp(32px, 7vw, 46px); letter-spacing: -.035em; }
+    .quote { margin: 10px 0 18px; color: rgba(234,234,234,.72); font: italic 15px/1.6 Georgia, serif; }
+    .video-frame { position: relative; width: 100%; padding-bottom: 75%; height: 0; overflow: hidden; border-radius: 8px; background: #000; }
+    .video-frame iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .resource { display: inline-flex; align-items: center; gap: 9px; margin-top: 15px; color: var(--gold); font-size: 10px; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
+    .resource:hover { color: #e0c487; }
+    .resource span { font-size: 15px; }
+    .footer { max-width: 1000px; margin: auto; padding: 24px 20px 34px; border-top: 1px solid var(--line); color: var(--muted); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
+    @media (min-width: 760px) { .hub { padding: 76px 32px 74px; } .video-card { padding: 30px; } .video-list { gap: 24px; } .quote { font-size: 16px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="index.html"><span class="mark">C</span> COMPETITIVE EDGE</a><a class="back" href="index.html">← Intro</a></header>
+  <main class="hub" id="videos">
+    <div class="hub-heading"><p class="eyebrow">Explore the qualities</p><h1>The competitive edge</h1></div>
+    <nav class="quality-nav" aria-label="Jump to a quality">
+      <a href="#perseverance">01 &nbsp; Perseverance</a><a href="#problem-solving">02 &nbsp; Problem solving</a><a href="#innovativeness">03 &nbsp; Innovativeness</a><a href="#conscientiousness">04 &nbsp; Conscientiousness</a><a href="#taking-initiative">05 &nbsp; Taking initiative</a>
+    </nav>
+    <div class="video-list">
+      <article class="video-card" id="perseverance"><p class="eyebrow">A quality of competitiveness</p><h2>Perseverance</h2><p class="quote">“Keep going; progress is built one step at a time.”</p><div class="video-frame"><iframe src="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/preview" title="Perseverance video" allow="autoplay" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Extra material / resource drive link <span aria-hidden="true">↗</span></a></article>
+      <article class="video-card" id="problem-solving"><p class="eyebrow">A quality of competitiveness</p><h2>Problem Solving</h2><p class="quote">“A clear question can open the way forward.”</p><div class="video-frame"><iframe src="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/preview" title="Problem solving video" allow="autoplay" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Extra material / resource drive link <span aria-hidden="true">↗</span></a></article>
+      <article class="video-card" id="innovativeness"><p class="eyebrow">A quality of competitiveness</p><h2>Innovativeness</h2><p class="quote">“New perspectives reveal unimagined solutions.”</p><div class="video-frame"><iframe src="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/preview" title="Innovativeness video" allow="autoplay" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Extra material / resource drive link <span aria-hidden="true">↗</span></a></article>
+      <article class="video-card" id="conscientiousness"><p class="eyebrow">A quality of competitiveness</p><h2>Conscientiousness</h2><p class="quote">“Excellence is in the details and steady execution.”</p><div class="video-frame"><iframe src="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/preview" title="Conscientiousness video" allow="autoplay" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Extra material / resource drive link <span aria-hidden="true">↗</span></a></article>
+      <article class="video-card" id="taking-initiative"><p class="eyebrow">A quality of competitiveness</p><h2>Taking Initiative</h2><p class="quote">“Small actions can begin remarkable change.”</p><div class="video-frame"><iframe src="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/preview" title="Taking initiative video" allow="autoplay" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Extra material / resource drive link <span aria-hidden="true">↗</span></a></article>
+    </div>
+  </main>
+  <footer class="footer">COMPETITIVE EDGE &nbsp;·&nbsp; COMPETITIVENESS</footer>
+</body>
+</html>
