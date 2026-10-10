@@ -24,10 +24,14 @@
     .eyebrow { margin: 0 0 20px; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
     h1 { margin: 0; font: 400 clamp(54px, 10vw, 104px)/.98 Georgia, "Times New Roman", serif; letter-spacing: -.05em; }
     .hero-copy > p:not(.eyebrow) { max-width: 450px; margin: 20px 0 28px; color: rgba(234,234,234,.8); font: 17px/1.65 Georgia, serif; }
+    .hero-copy .hero-quote { max-width: 480px; margin: 16px 0 0; color: var(--gold); font: italic 16px/1.55 Georgia, serif; }
+    .hero-copy h1, .hero-copy .hero-quote { transition: opacity .7s ease; }
+    .hero-copy .is-changing { opacity: 0; }
     .enter { display: inline-flex; align-items: center; gap: 16px; padding: 14px 18px; background: var(--gold); color: #171717; text-decoration: none; font-size: 10px; font-weight: 750; letter-spacing: .15em; text-transform: uppercase; transition: background .2s, transform .2s; }
     .enter:hover { background: #d8b879; transform: translateY(-2px); }
     .enter span { font-size: 17px; }
     .hero-bottom { position: absolute; inset: auto 0 20px; display: flex; justify-content: space-between; align-items: center; padding: 0 clamp(22px, 6vw, 76px); color: rgba(234,234,234,.7); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+    .hero-tagline { position: absolute; inset: auto 0 52px; margin: 0; padding: 0 clamp(22px, 6vw, 76px); color: rgba(234,234,234,.8); font: italic 14px/1.5 Georgia, serif; }
     .hero-count { color: var(--cream); font: 13px Georgia, serif; }
     .hero-count span { color: var(--muted); }
     @media (max-width: 600px) {
@@ -48,7 +52,8 @@
       <div class="hero-photo" style="background-image:url('images/problem%20solving.jpeg')" aria-hidden="true"></div>
       <div class="hero-photo" style="background-image:url('images/taking%20innitiative.jpeg')" aria-hidden="true"></div>
       <div class="hero-shade" aria-hidden="true"></div>
-      <div class="hero-copy"><p class="eyebrow">A team project on</p><h1>Competitiveness</h1><p>Five qualities. One mindset for moving forward.</p><a class="enter" href="content.html">Enter <span aria-hidden="true">→</span></a></div>
+      <div class="hero-copy"><p class="eyebrow">A team project on</p><h1 id="slide-title" aria-live="polite">Innovativeness</h1><p class="hero-quote" id="slide-quote">“New perspectives reveal unimagined solutions.”</p><a class="enter" href="content.html">Enter <span aria-hidden="true">→</span></a></div>
+      <p class="hero-tagline">Five qualities. One mindset for moving forward.</p>
       <div class="hero-bottom"><span>Ideas into action</span><span class="hero-count"><b id="slide-current">01</b> <span>/ 05</span></span></div>
     </section>
   </main>
@@ -56,6 +61,15 @@
     (() => {
       const slides = [...document.querySelectorAll('.hero-photo')];
       const counter = document.getElementById('slide-current');
+      const title = document.getElementById('slide-title');
+      const quote = document.getElementById('slide-quote');
+      const captions = [
+        { title: 'Innovativeness', quote: '“New perspectives reveal unimagined solutions.”' },
+        { title: 'Leadership', quote: '“Strong leaders help others move forward.”' },
+        { title: 'Perseverance', quote: '“Keep going; progress is built one step at a time.”' },
+        { title: 'Problem Solving', quote: '“A clear question can open the way forward.”' },
+        { title: 'Taking Initiative', quote: '“Small actions can begin remarkable change.”' }
+      ];
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       let active = 0;
       if (!reducedMotion) window.setInterval(() => {
@@ -63,7 +77,15 @@
         active = (active + 1) % slides.length;
         slides[active].classList.add('active');
         counter.textContent = String(active + 1).padStart(2, '0');
-      }, 3000);
+        title.classList.add('is-changing');
+        quote.classList.add('is-changing');
+        window.setTimeout(() => {
+          title.textContent = captions[active].title;
+          quote.textContent = captions[active].quote;
+          title.classList.remove('is-changing');
+          quote.classList.remove('is-changing');
+        }, 700);
+      }, 3500);
     })();
   </script>
 </body>
