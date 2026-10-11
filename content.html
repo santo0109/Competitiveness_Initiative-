@@ -3,43 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#121417">
+  <meta name="theme-color" content="#F7F6F5">
   <meta name="description" content="Explore five qualities that shape competitiveness.">
   <title>Competitive Edge — The Qualities</title>
   <style>
-    :root { color-scheme: dark; --bg: #121417; --panel: #181a1b; --gold: #c5a059; --cream: #eaeaea; --muted: #aaa9a4; --line: rgba(234,234,234,.13); }
+    :root { color-scheme: light; --bg: #F7F6F5; --panel: #8f314c9f; --yellow: #954ef1; --magenta: #A01666; --purple: #5D1558; --ink: #351334; --muted: #68435F; --line: rgba(93,21,88,.2); }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 76px; }
-    body { margin: 0; background: var(--bg); color: var(--cream); font-family: Inter, Montserrat, "Segoe UI", Arial, sans-serif; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: Inter, Montserrat, "Segoe UI", Arial, sans-serif; }
     a { color: inherit; }
-    .site-header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; padding: 16px clamp(20px, 6vw, 76px); background: rgba(18,20,23,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+    .site-header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; padding: 16px clamp(20px, 6vw, 76px); background: var(--purple); border-bottom: 1px solid var(--line); color: #fff; }
     .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; font-size: 11px; font-weight: 650; letter-spacing: .2em; }
-    .mark { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--gold); color: var(--gold); font: 17px Georgia, serif; }
-    .back { color: var(--muted); font-size: 9px; letter-spacing: .14em; text-decoration: none; text-transform: uppercase; }
-    .back:hover { color: var(--gold); }
+    .mark { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid #fff; color: #fff; font: 17px Georgia, serif; }
+    .back { color: #fff; font-size: 9px; letter-spacing: .14em; text-decoration: none; text-transform: uppercase; }
+    .back:hover { color: var(--yellow); }
     .hub { padding: 50px 20px 54px; }
     .hub-heading, .quality-nav, .video-list { max-width: 1000px; margin-left: auto; margin-right: auto; }
     .hub-heading { margin-bottom: 26px; }
-    .eyebrow { margin: 0 0 12px; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
+    .eyebrow { margin: 0 0 12px; color: var(--magenta); font-size: 10px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
     h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
     .hub-heading h1 { margin: 0; font-size: clamp(38px, 7vw, 62px); letter-spacing: -.04em; }
-    .quality-nav { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: thin; scrollbar-color: var(--gold) transparent; padding: 0 0 10px; margin-bottom: 22px; }
-    .quality-nav a { flex: 0 0 auto; color: var(--muted); padding: 10px 12px; border: 1px solid var(--line); text-decoration: none; font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
-    .quality-nav a:hover, .quality-nav a:focus-visible { border-color: var(--gold); color: var(--cream); }
+    .quality-nav { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: thin; scrollbar-color: var(--magenta) transparent; padding: 0 0 10px; margin-bottom: 22px; }
+    .quality-nav a { flex: 0 0 auto; color: var(--ink); padding: 10px 12px; border: 1px solid var(--line); text-decoration: none; font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+    .quality-nav a:hover, .quality-nav a:focus-visible { border-color: var(--magenta); color: var(--purple); }
     .video-list { display: grid; gap: 16px; }
-    .video-card { padding: 21px 17px 18px; background: var(--panel); border: 1px solid var(--line); scroll-margin-top: 85px; }
-    .video-card h2 { margin: 0; font-size: clamp(32px, 7vw, 46px); letter-spacing: -.035em; }
-    .quote { margin: 10px 0 18px; color: rgba(234,234,234,.72); font: italic 15px/1.6 Georgia, serif; }
+    .video-card { padding: 21px 17px 18px; background: var(--panel); border: 1px solid var(--line); border-top: 4px solid var(--magenta); border-radius: 18px; color: #fff; scroll-margin-top: 85px; }
+    .video-card h2 { margin: 0; font-size: clamp(32px, 7vw, 46px); letter-spacing: -.035em; color: #fff; }
+    .quote { margin: 10px 0 18px; color: rgba(255,255,255,.88); font: italic 15px/1.6 Georgia, serif; }
     .video-frame { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000; }
     .video-frame iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-    .resource { display: inline-flex; align-items: center; gap: 9px; margin-top: 15px; color: var(--gold); font-size: 10px; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
-    .resource:hover { color: #e0c487; }
+    .resource { display: inline-flex; align-items: center; gap: 9px; margin-top: 15px; color: #f7d8ef; font-size: 10px; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
+    .resource:hover { color: var(--magenta); }
     .resource span { font-size: 15px; }
     .footer { max-width: 1000px; margin: auto; padding: 30px 20px 38px; border-top: 1px solid var(--line); color: var(--muted); }
-    .footer-title { margin: 0 0 18px; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    .footer-title { margin: 0 0 18px; color: var(--magenta); font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
     .team-list { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 0; padding: 0; list-style: none; }
-    .team-list a { color: var(--cream); font-size: 13px; text-decoration: none; }
-    .team-list a:hover, .team-list a:focus-visible { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
+    .team-list a { color: var(--ink); font-size: 13px; text-decoration: none; }
+    .team-list a:hover, .team-list a:focus-visible { color: var(--magenta); text-decoration: underline; text-underline-offset: 4px; }
     .footer-credit { margin: 24px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
     @media (min-width: 760px) { .hub { padding: 76px 32px 74px; } .video-card { padding: 30px; } .video-list { gap: 24px; } .quote { font-size: 16px; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -53,21 +53,21 @@
       <a href="#perseverance">01 &nbsp; Perseverance</a><a href="#problem-solving">02 &nbsp; Problem solving</a><a href="#innovativeness">03 &nbsp; Innovativeness</a><a href="#conscientiousness">04 &nbsp; Conscientiousness</a><a href="#taking-initiative">05 &nbsp; Taking initiative</a>
     </nav>
     <div class="video-list">
-      <article class="video-card" id="perseverance"><p class="eyebrow">A quality of competitiveness</p><h2>Perseverance</h2><p class="quote">“Keep going; progress is built one step at a time.”</p><div class="video-frame"><!-- Replace YOUTUBE_VIDEO_ID with the Perseverance video ID. --><iframe src="https://www.youtube.com/embed/fUWtBBRhmBg" title="Perseverance video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Extra material / resource drive link <span aria-hidden="true">↗</span></a></article>
-      <article class="video-card" id="problem-solving"><p class="eyebrow">A quality of competitiveness</p><h2>Problem Solving</h2><p class="quote">“A clear question can open the way forward.”</p><div class="video-frame"><!-- Replace YOUTUBE_VIDEO_ID with the Problem Solving video ID. --><iframe src="https://www.youtube.com/embed/fUWtBBRhmBg" title="Problem solving video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Extra material / resource drive link <span aria-hidden="true">↗</span></a></article>
-      <article class="video-card" id="innovativeness"><p class="eyebrow">A quality of competitiveness</p><h2>Innovativeness</h2><p class="quote">“New perspectives reveal unimagined solutions.”</p><div class="video-frame"><!-- Replace YOUTUBE_VIDEO_ID with the Innovativeness video ID. --><iframe src="https://www.youtube.com/embed/fUWtBBRhmBg" title="Innovativeness video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Extra material / resource drive link <span aria-hidden="true">↗</span></a></article>
-      <article class="video-card" id="conscientiousness"><p class="eyebrow">A quality of competitiveness</p><h2>Conscientiousness</h2><p class="quote">“Excellence is in the details and steady execution.”</p><div class="video-frame"><!-- Replace YOUTUBE_VIDEO_ID with the Conscientiousness video ID. --><iframe src="https://www.youtube.com/embed/ioOe-6k7EuY" title="Conscientiousness video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Extra material / resource drive link <span aria-hidden="true">↗</span></a></article>
-      <article class="video-card" id="taking-initiative"><p class="eyebrow">A quality of competitiveness</p><h2>Taking Initiative</h2><p class="quote">“Small actions can begin remarkable change.”</p><div class="video-frame"><!-- Replace YOUTUBE_VIDEO_ID with the Taking Initiative video ID. --><iframe src="https://www.youtube.com/embed/fUWtBBRhmBg" title="Taking initiative video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="https://drive.google.com/file/d/1-GsQpjgsG7HzMloQs1WUBgX-LkAkuf6_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Extra material / resource drive link <span aria-hidden="true">↗</span></a></article>
+      <article class="video-card" id="perseverance"><p class="eyebrow">A quality of competitiveness</p><h2>Perseverance</h2><p class="quote">“Keep going; progress is built one step at a time.”</p><div class="video-frame"><!-- Replace YOUTUBE_VIDEO_ID with the Perseverance video ID. --><iframe src="https://www.youtube.com/embed/RG85vIIzaFs" title="Perseverance video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="extra-materials.html#perseverance">Extra material <span aria-hidden="true">↗</span></a></article>
+      <article class="video-card" id="problem-solving"><p class="eyebrow">A quality of competitiveness</p><h2>Problem Solving</h2><p class="quote">“A clear question can open the way forward.”</p><div class="video-frame"><!-- Replace YOUTUBE_VIDEO_ID with the Problem Solving video ID. --><iframe src="https://www.youtube.com/embed/-YgyMTu3fUw" title="Problem solving video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="extra-materials.html#problem-solving">Extra material <span aria-hidden="true">↗</span></a></article>
+      <article class="video-card" id="innovativeness"><p class="eyebrow">A quality of competitiveness</p><h2>Innovativeness</h2><p class="quote">“New perspectives reveal unimagined solutions.”</p><div class="video-frame"><!-- Replace YOUTUBE_VIDEO_ID with the Innovativeness video ID. --><iframe src="https://www.youtube.com/embed/cWnxy8qMldA" title="Innovativeness video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="extra-materials.html#innovativeness">Extra material <span aria-hidden="true">↗</span></a></article>
+      <article class="video-card" id="conscientiousness"><p class="eyebrow">A quality of competitiveness</p><h2>Conscientiousness</h2><p class="quote">“Excellence is in the details and steady execution.”</p><div class="video-frame"><!-- Replace YOUTUBE_VIDEO_ID with the Conscientiousness video ID. --><iframe src="https://www.youtube.com/embed/ioOe-6k7EuY" title="Conscientiousness video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="https://youtu.be/WHtzsvKKB9E?si=dwqiTbv9Gj5tGCEQ" target="_blank" rel="noopener noreferrer">Extra material / resource drive link <span aria-hidden="true">↗</span></a></article>
+      <article class="video-card" id="taking-initiative"><p class="eyebrow">A quality of competitiveness</p><h2>Taking Initiative</h2><p class="quote">“Small actions can begin remarkable change.”</p><div class="video-frame"><!-- Replace YOUTUBE_VIDEO_ID with the Taking Initiative video ID. --><iframe src="https://www.youtube.com/embed/Su0zjZvxeI4" title="Taking initiative video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><a class="resource" href="https://youtu.be/CogQvdmVRBc" target="_blank" rel="noopener noreferrer">Extra material / resource drive link <span aria-hidden="true">↗</span></a></article>
     </div>
   </main>
   <footer class="footer">
-    <p class="footer-title">Our team</p>
+    <p class="footer-title">FURIOUS FIVE</p>
     <ul class="team-list">
-      <li><a href="https://www.linkedin.com/in/shanta-biswas43" target="_blank" rel="noopener noreferrer">Sinchana S D ↗</a></li>
-      <li><a href="https://www.linkedin.com/in/shanta-biswas43" target="_blank" rel="noopener noreferrer">Meghraj Soni ↗</a></li>
+      <li><a href="https://www.linkedin.com/in/sinchana-devadiga-2267b03ba?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">Sinchana Devadiga ↗</a></li>
+      <li><a href="https://www.linkedin.com/in/meghraj-soni-52b678422?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">Meghraj Soni ↗</a></li>
       <li><a href="https://www.linkedin.com/in/shanta-biswas43" target="_blank" rel="noopener noreferrer">Shanta Biswas ↗</a></li>
-      <li><a href="https://www.linkedin.com/in/shanta-biswas43" target="_blank" rel="noopener noreferrer">Khushi Yadav ↗</a></li>
-      <li><a href="https://www.linkedin.com/in/shanta-biswas43" target="_blank" rel="noopener noreferrer">Himanshu Kumar ↗</a></li>
+      <li><a href="https://www.linkedin.com/in/khushi-yadav-a29425391?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">Khushi Yadav ↗</a></li>
+      <li><a href="https://www.linkedin.com/in/himanshu-kumar-a94464369?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">Himanshu Kumar ↗</a></li>
     </ul>
     <p class="footer-credit">Competitive Edge &nbsp;·&nbsp; Competitiveness</p>
   </footer>
